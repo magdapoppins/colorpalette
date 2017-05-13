@@ -17,7 +17,18 @@
 @import "bootstrap";
 
 body { padding-top: 100px; }
-footer { margin-top: 100px; }
+footer { margin-top: 100px;
+        text-align: center;
+        }
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 td { padding: 9px; }
+h1 {
+  margin-bottom: 30px;
+  font-family: 'Pacifico', cursive;
+  font-size: 500%;
+  text-align: center;
+}
+table {
+  width: 100%;
+}
