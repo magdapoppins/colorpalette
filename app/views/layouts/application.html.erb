@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Railsstockholm</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav class='navbar navbar-default navbar-fixed-top' role='navigation'>
+      <div class='container'>
+        <div class='navbar-header'>
+          <a class='navbar-brand' href='/'>The Color App</a>
+        </div>
+        <ul class='nav navbar-nav'>
+          <li>
+            <a href='/colorpalettes'>Collections</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class='container'>
+      <%= yield %>
+    </div>
+
+    <footer>
+      <div class='container'>
+        Rails Girls Stockholm 2017
+      </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<%= form_with(model: colorpalette, local: true) do |form| %>
+  <% if colorpalette.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(colorpalette.errors.count, "error") %> prohibited this colorpalette from being saved:</h2>
+
+      <ul>
+      <% colorpalette.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :colorpalette_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :colorpalette_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.file_field :picture, id: :colorpalette_picture %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
